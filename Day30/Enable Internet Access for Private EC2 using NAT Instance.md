@@ -1,5 +1,7 @@
 # NAT Instance Setup for Private EC2 Internet Access
 
+![Architecture Diagram](images/image.png)
+
 ## 📌 Problem Statement
 
 The Nautilus DevOps team needs to enable internet access for an EC2 instance running in a private subnet.  
@@ -61,16 +63,12 @@ Private EC2
 - VPC: `xfusion-priv-vpc`
 - CIDR: Non-overlapping range (e.g., `10.0.2.0/24`)
 
-![Step 1 - Create Public Subnet](images/Screenshot%202026-02-20%20235435.png)
-
 ---
 
 ### 2️⃣ Create and Attach Internet Gateway
 
 - Create IGW: `xfusion-igw`
 - Attach to: `xfusion-priv-vpc`
-
-![Step 2 - Create and Attach Internet Gateway](images/Screenshot%202026-02-20%20235453.png)
 
 ---
 
@@ -84,8 +82,6 @@ Add route:
 
 Associate with: `xfusion-pub-subnet`
 
-![Step 3 - Configure Public Route Table](images/Screenshot%202026-02-20%20235514.png)
-
 ---
 
 ### 4️⃣ Launch NAT Instance
@@ -95,8 +91,6 @@ Associate with: `xfusion-pub-subnet`
 - Subnet: `xfusion-pub-subnet`
 - Auto-assign Public IP: **Enabled**
 - Security Group: Custom (see Step 5)
-
-![Step 4 - Launch NAT Instance](images/Screenshot%202026-02-20%20235528.png)
 
 ---
 
@@ -115,16 +109,12 @@ Associate with: `xfusion-pub-subnet`
 |------|-------------|
 | All Traffic | `0.0.0.0/0` |
 
-![Step 5 - Configure Security Group](images/Screenshot%202026-02-20%20235558.png)
-
 ---
 
 ### 6️⃣ Disable Source/Destination Check
 
 Navigate to: **EC2 → Actions → Networking → Change Source/Destination Check**  
 Set to: **Disabled**
-
-![Step 6 - Disable Source/Destination Check](images/Screenshot%202026-02-20%20235613.png)
 
 ---
 
@@ -144,8 +134,6 @@ sudo yum install iptables-services -y
 sudo service iptables save
 ```
 
-![Step 7 - Configure NAT Instance](images/Screenshot%202026-02-20%20235624.png)
-
 ---
 
 ### 8️⃣ Update Private Subnet Route Table
@@ -156,15 +144,11 @@ Add a route in the **private subnet's route table** to direct internet-bound tra
 |-------------|--------|
 | `0.0.0.0/0` | NAT Instance (instance ID) |
 
-![Step 8 - Update Private Route Table](images/Screenshot%202026-02-20%20235638.png)
-
 ---
 
 ### 9️⃣ Verify S3 Upload
 
 Wait for the cron job to run (fires every minute) and verify that `xfusion-test.txt` appears in the S3 bucket `xfusion-nat-14836`.
-
-![Step 9 - Verify S3 Upload](images/Screenshot%202026-02-20%20235811.png)
 
 ---
 
@@ -172,7 +156,29 @@ Wait for the cron job to run (fires every minute) and verify that `xfusion-test.
 
 The private EC2 instance can now reach the internet through the NAT Instance, and `xfusion-test.txt` is successfully uploaded to the S3 bucket.
 
-![Final Result](images/Screenshot%202026-02-20%20235836.png)
+---
+
+## 🖼️ Screenshots
+
+![](images/Screenshot%202026-02-20%20235435.png)
+
+![](images/Screenshot%202026-02-20%20235453.png)
+
+![](images/Screenshot%202026-02-20%20235514.png)
+
+![](images/Screenshot%202026-02-20%20235528.png)
+
+![](images/Screenshot%202026-02-20%20235558.png)
+
+![](images/Screenshot%202026-02-20%20235613.png)
+
+![](images/Screenshot%202026-02-20%20235624.png)
+
+![](images/Screenshot%202026-02-20%20235638.png)
+
+![](images/Screenshot%202026-02-20%20235811.png)
+
+![](images/Screenshot%202026-02-20%20235836.png)
 
 ---
 
