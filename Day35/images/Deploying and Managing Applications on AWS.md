@@ -84,3 +84,33 @@ ssh -i key.pem ubuntu@public-ip
 
 sudo apt update
 sudo apt install apache2 -y
+
+---
+
+# 📸 Day 35 — Implementation Screenshots
+
+## AWS Setup & Deployment Steps
+
+![Screenshot 1](images/Screenshot%202026-02-27%20183544.png)
+
+![Screenshot 2](images/Screenshot%202026-02-27%20183800.png)
+
+![Screenshot 3](images/Screenshot%202026-02-27%20183811.png)
+
+![Screenshot 4](images/Screenshot%202026-02-27%20184420.png)
+
+![Screenshot 5](images/Screenshot%202026-02-27%20185445.png)
+
+![Screenshot 6](images/Screenshot%202026-02-27%20190454.png)
+
+![Screenshot 7](images/Screenshot%202026-02-27%20190612.png)
+
+![Screenshot 8](images/Screenshot%202026-02-27%20190908.png)
+
+![Screenshot 9](images/Screenshot%202026-02-27%20191847.png)
+
+![Screenshot 10](images/Screenshot%202026-02-27%20192052.png)
+
+![Screenshot 11](images/Screenshot%202026-02-27%20192103.png)
+
+![Screenshot 12](images/Screenshot%202026-02-27%20192126.png)
