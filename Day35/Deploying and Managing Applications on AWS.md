@@ -10,18 +10,6 @@ This project helped me gain practical exposure to cloud fundamentals and DevOps 
 
 ---
 
-## 🎥 Learning Reference
-
-I followed the below tutorial for learning purposes:
-
-▶️ https://www.youtube.com/watch?v=9Z_j0Zon60U
-
-The tutorial demonstrates practical AWS usage including instance setup, connectivity, and cloud deployment concepts.
-
-AWS provides scalable and secure cloud infrastructure widely used to build and deploy modern applications.
-
----
-
 ## 🚀 Services Used
 
 - Amazon EC2  
