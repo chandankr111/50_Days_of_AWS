@@ -14,19 +14,15 @@ The encryption ensures that sensitive information is protected at rest, while AW
 Below are the screenshots from the Day41 lab, in order of execution:
 
 
-        ![KMS Key Creation](images/Screenshot%202026-03-10%20110723.png)
+ ![KMS Key Creation](images/Screenshot%202026-03-10%20110723.png)
+![Sensitive File Verification](images/Screenshot%202026-03-10%20110735.png)
 
-        ![Sensitive File Verification](images/Screenshot%202026-03-10%20110735.png)
-3
-        ![Encryption Command Execution](images/Screenshot%202026-03-10%20110807.png)
-4.
-        ![Encrypted File Generated](images/Screenshot%202026-03-10%20111733.png)
-5.
-        ![Decryption Command](images/Screenshot%202026-03-10%20112341.png)
-6.
-        ![Verification of Decrypted File](images/Screenshot%202026-03-10%20112505.png)
+![Encryption Command Execution](images/Screenshot%202026-03-10%20110807.png)
+![Encrypted File Generated](images/Screenshot%202026-03-10%20111733.png)
+![Decryption Command](images/Screenshot%202026-03-10%20112341.png)
+![Verification of Decrypted File](images/Screenshot%202026-03-10%20112505.png)
 
----
+
 
 In this project:
 

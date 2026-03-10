@@ -180,13 +180,12 @@ This makes DynamoDB ideal for modern cloud applications such as **task managers,
 Below are the screenshots from the Day42 lab, in order of execution:
 
 
-        ![EKS Cluster Creation](images/Screenshot%202026-03-10%20115650.png)
+![EKS Cluster Creation](images/Screenshot%202026-03-10%20115650.png)
 
-        ![Node Group Setup](images/Screenshot%202026-03-10%20115814.png)
+![Node Group Setup](images/Screenshot%202026-03-10%20115814.png)
+ ![Kubernetes Dashboard](images/Screenshot%202026-03-10%20120037.png)
 
-        ![Kubernetes Dashboard](images/Screenshot%202026-03-10%20120037.png)
-
-        ![Scaling Nodes](images/Screenshot%202026-03-10%20120144.png)
+ ![Scaling Nodes](images/Screenshot%202026-03-10%20120144.png)
 
 ---
 
